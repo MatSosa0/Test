@@ -1,15 +1,18 @@
+using SistemaVentas.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar controllers
 builder.Services.AddControllers();
 
-// 👉 Agregar Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<AppDbContext>(options => 
+options.UseOracle(builder.Configuration.GetConnectionString("OracleDb")));
+
 var app = builder.Build();
 
-// 👉 Habilitar Swagger SOLO en desarrollo
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

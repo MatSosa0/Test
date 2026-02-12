@@ -1,3 +1,5 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 namespace SistemaVentas.Models
 {
     public class Producto

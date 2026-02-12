@@ -40,6 +40,7 @@ namespace SistemaVentas.Controllers
         [HttpPut("{id:int}")]
         public async Task<IActionResult> Put(int id, Producto producto)
         {
+
             if(id!= producto.Id)
             {
                 return BadRequest("El ID no coincide");

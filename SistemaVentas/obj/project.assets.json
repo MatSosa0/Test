@@ -3734,6 +3734,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.3",
       "Oracle.EntityFrameworkCore >= 10.23.26100",
       "Serilog.AspNetCore >= 10.0.0",
+      "Serilog.Sinks.Console >= 6.1.1",
       "Swashbuckle.AspNetCore >= 10.1.2"
     ]
   },
@@ -3816,6 +3817,10 @@
           "Serilog.AspNetCore": {
             "target": "Package",
             "version": "[10.0.0, )"
+          },
+          "Serilog.Sinks.Console": {
+            "target": "Package",
+            "version": "[6.1.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
